@@ -104,7 +104,7 @@ public class DishContorller {
     }
 
     /**
-     * 根据id查询菜品信息和对应的口味信息
+     * 根据id查询菜品信息及对应的口味信息
      * @param id
      * @return
      */
