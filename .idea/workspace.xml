@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c6bb46c1-7a7a-47a2-8877-3d5ceb06671f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +26,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="test" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -47,7 +47,8 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="jdk.selected.JAVA_MODULE" value="1.8" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../java-redis" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -64,6 +65,14 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.ReggieAoolication (1)">
+    <configuration name="All in reggie_take_out1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="reggie_take_out1" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="upload.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/reggie_take_out/backend/page/demo/upload.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -100,6 +109,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.All in reggie_take_out1" />
         <item itemvalue="JavaScript Debug.upload.html" />
       </list>
     </recent_temporary>
@@ -125,8 +135,32 @@
       <workItem from="1681008453814" duration="8000" />
       <workItem from="1681008472273" duration="42000" />
       <workItem from="1681008677034" duration="431000" />
-      <workItem from="1681009127905" duration="350000" />
+      <workItem from="1681009127905" duration="1550000" />
+      <workItem from="1681122118460" duration="598000" />
+      <workItem from="1681554677256" duration="1604000" />
+      <workItem from="1681726163141" duration="1045000" />
+      <workItem from="1681817152582" duration="2012000" />
+      <workItem from="1681910161685" duration="6170000" />
+      <workItem from="1682067408690" duration="597000" />
+      <workItem from="1682069148665" duration="281000" />
+      <workItem from="1682069450761" duration="1207000" />
+      <workItem from="1682169693719" duration="2512000" />
     </task>
+    <task id="LOCAL-00001" summary="test...">
+      <created>1681009696893</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1681009696893</updated>
+    </task>
+    <task id="LOCAL-00002" summary="test...">
+      <created>1681009738905</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1681009738905</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -157,6 +191,7 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="test..." />
+    <option name="LAST_COMMIT_MESSAGE" value="test..." />
   </component>
 </project>
