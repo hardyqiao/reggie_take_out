@@ -160,7 +160,7 @@ public class SetmealServiceImpl extends ServiceImpl<SetmealMapper,Setmeal> imple
         //添加根据ids修改status状态语句
         LambdaUpdateWrapper<Setmeal> updateWrapper = new LambdaUpdateWrapper<>();
         updateWrapper.in(Setmeal::getId,ids);
-        updateWrapper.set(Setmeal::getStatus,0);
+        updateWrapper.set(Setmeal::getStatus,status);
 
         //修改status状态
         this.update(updateWrapper);
@@ -173,6 +173,7 @@ public class SetmealServiceImpl extends ServiceImpl<SetmealMapper,Setmeal> imple
      */
     @Override
     public int stopSetmealWithDish(List<Long> ids) {
+        int count = 0;
 
         //根据菜品id查询相关联的套餐
         LambdaQueryWrapper<SetmealDish> queryWrapper = new LambdaQueryWrapper<>();
@@ -181,15 +182,17 @@ public class SetmealServiceImpl extends ServiceImpl<SetmealMapper,Setmeal> imple
 
         //查询菜品相关联的套餐
         List<SetmealDish> list = setmealDishService.list(queryWrapper);
-        List<Long> setmealIdList = list.stream().map(SetmealDish::getSetmealId).collect(Collectors.toList());
+        if (list != null && list.size() != 0) {
+            List<Long> setmealIdList = list.stream().map(SetmealDish::getSetmealId).collect(Collectors.toList());
 
-        //添加判断套餐为起售状态的条件
-        LambdaQueryWrapper<Setmeal> setmealLambdaQueryWrapper = new LambdaQueryWrapper<>();
-        setmealLambdaQueryWrapper.in(Setmeal::getId,setmealIdList);
-        setmealLambdaQueryWrapper.in(Setmeal::getStatus,1);
+            //添加判断套餐为起售状态的条件
+            LambdaQueryWrapper<Setmeal> setmealLambdaQueryWrapper = new LambdaQueryWrapper<>();
+            setmealLambdaQueryWrapper.in(Setmeal::getId, setmealIdList);
+            setmealLambdaQueryWrapper.in(Setmeal::getStatus, 1);
 
-        //查询起售状态的套餐数量
-        int count = this.count(setmealLambdaQueryWrapper);
+            //查询起售状态的套餐数量
+            count = this.count(setmealLambdaQueryWrapper);
+        }
 
         return count;
     }

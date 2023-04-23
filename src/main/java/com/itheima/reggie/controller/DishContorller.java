@@ -16,6 +16,8 @@ import org.apache.commons.lang.StringUtils;
 import org.apache.ibatis.annotations.Delete;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.bind.annotation.*;
 
@@ -51,6 +53,7 @@ public class DishContorller {
      * @return
      */
     @PostMapping
+    @CacheEvict(value = "dishCache",allEntries = true)
     public R<String> save(@RequestBody DishDto dishDto){
         log.info(dishDto.toString());
 
@@ -128,6 +131,7 @@ public class DishContorller {
      * @return
      */
     @PutMapping
+    @CacheEvict(value = "dishCache",allEntries = true)
     public R<String> update(@RequestBody DishDto dishDto){
         log.info(dishDto.toString());
 
@@ -167,19 +171,20 @@ public class DishContorller {
     }
     */
     @GetMapping("/list")
+    @Cacheable(value = "dishCache",key = "#dish.categoryId + '_' + #dish.status")
     public R<List<DishDto>> list(Dish dish){
         List<DishDto> dishDtoList = null;
 
         //动态构造key
-        String key = "dish_" + dish.getCategoryId() + "_" + dish.getStatus();//dish-1397844391040167938_1
+//        String key = "dish_" + dish.getCategoryId() + "_" + dish.getStatus();//dish-1397844391040167938_1
 
         //先从redis中获取缓存数据
-        dishDtoList = (List<DishDto>) redisTemplate.opsForValue().get(key);
+//        dishDtoList = (List<DishDto>) redisTemplate.opsForValue().get(key);
 
-        if (dishDtoList != null) {
+//        if (dishDtoList != null) {
             //如果存在，直接返回，无需查询数据库
-            return R.success(dishDtoList);
-        }
+//            return R.success(dishDtoList);
+//        }
 
         //构造查询条件
         LambdaQueryWrapper<Dish> queryWrapper = new LambdaQueryWrapper<>();
@@ -220,7 +225,7 @@ public class DishContorller {
         }).collect(Collectors.toList());
 
         //如果不存在，需要查询数据库，将查询到的菜品数据缓存到Redis
-        redisTemplate.opsForValue().set(key,dishDtoList,60, TimeUnit.MINUTES);
+//        redisTemplate.opsForValue().set(key,dishDtoList,60, TimeUnit.MINUTES);
 
         return R.success(dishDtoList);
     }
@@ -246,6 +251,7 @@ public class DishContorller {
      * @return
      */
     @PostMapping("/status/{status}")
+    @CacheEvict(value = "dishCache",allEntries = true)
     public R<String> startAndStopDish(@PathVariable int status,@RequestParam List<Long> ids){
 
         //判断是停售还是起售

@@ -160,7 +160,7 @@ public class DishServiceImpl extends ServiceImpl<DishMapper,Dish> implements Dis
             }
         }
 
-        //设置status = 1 修改条件
+        //根据iD进行修改status
         LambdaUpdateWrapper<Dish> updateWrapper = new LambdaUpdateWrapper<>();
         updateWrapper.in(Dish::getId,ids);
         updateWrapper.set(Dish::getStatus,status);
