@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c6bb46c1-7a7a-47a2-8877-3d5ceb06671f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,8 +63,19 @@
       <recent name="D:\studyFile\Java\java\reggie_take_out" />
       <recent name="D:\studyFile\Java\java\reggie_take_out\src" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\studyFile\Java\java\reggie_take_out" />
+    </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.ReggieAoolication (1)">
+  <component name="RunManager" selected="JUnit.All in reggie_take_out1">
+    <configuration name="All in reggie_take_out1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="reggie_take_out1" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="upload.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/reggie_take_out/backend/page/demo/upload.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -100,6 +112,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.All in reggie_take_out1" />
         <item itemvalue="JavaScript Debug.upload.html" />
       </list>
     </recent_temporary>
