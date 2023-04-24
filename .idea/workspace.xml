@@ -205,7 +205,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="LAST_COMMIT_MESSAGE" value="" />
     <MESSAGE value="加入redis，缓存验证码和菜品" />
     <MESSAGE value="Redis环境的配置" />
     <option name="LAST_COMMIT_MESSAGE" value="Redis环境的配置" />
