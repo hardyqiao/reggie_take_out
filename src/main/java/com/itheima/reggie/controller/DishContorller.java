@@ -186,7 +186,7 @@ public class DishContorller {
             //如果存在，直接返回，无需查询数据库
 //            return R.success(dishDtoList);
 //        }
-        List<DishDto> dishDtoList = null;
+//        List<DishDto> dishDtoList = null;
 
         //动态构造key
         String key = "dish_" + dish.getCategoryId() + "_" + dish.getStatus();//dish-1397844391040167938_1
