@@ -16,6 +16,7 @@ import org.apache.commons.lang.StringUtils;
 import org.apache.ibatis.annotations.Delete;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -185,6 +186,18 @@ public class DishContorller {
             //如果存在，直接返回，无需查询数据库
 //            return R.success(dishDtoList);
 //        }
+        List<DishDto> dishDtoList = null;
+
+        //动态构造key
+        String key = "dish_" + dish.getCategoryId() + "_" + dish.getStatus();//dish-1397844391040167938_1
+
+        //先从redis中获取缓存数据
+        dishDtoList = (List<DishDto>) redisTemplate.opsForValue().get(key);
+
+        if (dishDtoList != null) {
+            //如果存在，直接返回，无需查询数据库
+            return R.success(dishDtoList);
+        }
 
         //构造查询条件
         LambdaQueryWrapper<Dish> queryWrapper = new LambdaQueryWrapper<>();
@@ -226,6 +239,9 @@ public class DishContorller {
 
         //如果不存在，需要查询数据库，将查询到的菜品数据缓存到Redis
 //        redisTemplate.opsForValue().set(key,dishDtoList,60, TimeUnit.MINUTES);
+
+        //如果不存在，需要查询数据库，将查询到的菜品数据缓存到Redis
+        redisTemplate.opsForValue().set(key,dishDtoList,60, TimeUnit.MINUTES);
 
         return R.success(dishDtoList);
     }
