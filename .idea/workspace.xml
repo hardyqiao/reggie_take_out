@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c6bb46c1-7a7a-47a2-8877-3d5ceb06671f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/itheima/reggie/controller/DishContorller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/itheima/reggie/controller/DishContorller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +71,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/itheima/reggie/config" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../java-redis" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -94,7 +94,15 @@
       <recent name="D:\studyFile\Java\java\reggie_take_out" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.ReggieAoolication (1)">
+  <component name="RunManager" selected="JUnit.All in reggie_take_out1 (1)">
+    <configuration name="All in reggie_take_out1 (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="reggie_take_out1" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="All in reggie_take_out1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="reggie_take_out1" />
       <option name="PACKAGE_NAME" value="" />
@@ -139,11 +147,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.All in reggie_take_out1 (1)" />
         <item itemvalue="JUnit.All in reggie_take_out1" />
-        <item itemvalue="JUnit.All in reggie_take_out1" />
-        <item itemvalue="JavaScript Debug.upload.html" />
-        <item itemvalue="JUnit.All in reggie_take_out1" />
-        <item itemvalue="JavaScript Debug.upload.html" />
         <item itemvalue="JUnit.All in reggie_take_out1" />
         <item itemvalue="JavaScript Debug.upload.html" />
         <item itemvalue="JUnit.All in reggie_take_out1" />
@@ -211,7 +216,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682586944843</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="生成swagger接口文档">
+      <created>1682590115190</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1682590115190</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
