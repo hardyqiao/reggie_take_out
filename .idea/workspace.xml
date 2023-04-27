@@ -6,10 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c6bb46c1-7a7a-47a2-8877-3d5ceb06671f" name="Changes" comment="使用Spring Cache缓存套餐及菜品数据">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/itheima/reggie/controller/DishContorller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/itheima/reggie/controller/DishContorller.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,11 +25,18 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="v1.2" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="MIXED" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$PROJECT_DIR$/../../../../exploiture/apache-maven-3.6.1" />
+      </MavenGeneralSettings>
+    </option>
   </component>
   <component name="ProjectId" id="2O9GZaYYrXOCZefiWLpW3BpFVZd" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -58,7 +61,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.1507799" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="project.scopes" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
@@ -150,6 +153,8 @@
       <workItem from="1681009127905" duration="350000" />
       <workItem from="1682317098137" duration="5524000" />
       <workItem from="1682331152095" duration="2566000" />
+      <workItem from="1682388040153" duration="5523000" />
+      <workItem from="1682576220359" duration="441000" />
     </task>
     <task id="LOCAL-00001" summary="加入redis，缓存验证码和菜品">
       <created>1682219985590</created>
@@ -206,6 +211,7 @@
     <MESSAGE value="加入redis，缓存验证码和菜品" />
     <MESSAGE value="Redis环境的配置" />
     <MESSAGE value="使用Spring Cache缓存套餐及菜品数据" />
-    <option name="LAST_COMMIT_MESSAGE" value="使用Spring Cache缓存套餐及菜品数据" />
+    <MESSAGE value="使用Swagger生成接口文档" />
+    <option name="LAST_COMMIT_MESSAGE" value="使用Swagger生成接口文档" />
   </component>
 </project>
