@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c6bb46c1-7a7a-47a2-8877-3d5ceb06671f" name="Changes" comment="" />
+    <list default="true" id="c6bb46c1-7a7a-47a2-8877-3d5ceb06671f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -177,7 +180,7 @@
       <workItem from="1682317098137" duration="5524000" />
       <workItem from="1682331152095" duration="2566000" />
       <workItem from="1682388040153" duration="5523000" />
-      <workItem from="1682676395646" duration="1925000" />
+      <workItem from="1682676395646" duration="2605000" />
     </task>
     <task id="LOCAL-00001" summary="加入redis，缓存验证码和菜品">
       <created>1682219985590</created>
@@ -249,7 +252,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682686974092</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="使用懒加载">
+      <created>1682687598276</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1682687598276</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -286,6 +296,7 @@
     <MESSAGE value="生成swagger接口文档" />
     <MESSAGE value="数据库调试" />
     <MESSAGE value="图片调试" />
-    <option name="LAST_COMMIT_MESSAGE" value="图片调试" />
+    <MESSAGE value="使用懒加载" />
+    <option name="LAST_COMMIT_MESSAGE" value="使用懒加载" />
   </component>
 </project>
