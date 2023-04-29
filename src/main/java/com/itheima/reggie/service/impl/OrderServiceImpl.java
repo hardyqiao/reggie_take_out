@@ -10,6 +10,7 @@ import com.itheima.reggie.mapper.OrderMapper;
 import com.itheima.reggie.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -41,6 +42,7 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Orders> implement
      * @param orders
      */
     @Override
+    @Transactional
     public void submit(Orders orders) {
 
         //获得当前用户id
@@ -105,5 +107,52 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Orders> implement
 
         //清空购物车数据
         shoppingCartService.remove(queryWrapper);
+    }
+
+    /**
+     * 复制订单信息并重新下单
+     * @param orders
+     */
+    @Override
+    @Transactional
+    public void copyOrdersSubmit(Orders orders) {
+
+        //查询订单信息
+        Orders orders1 = super.getById(orders);
+
+        //订单号
+        long orderId = IdWorker.getId();
+
+        if (orders1 != null) {
+            //添加订单号、订单创建时间、付款时间、状态
+            orders1.setId(orderId);
+            orders1.setNumber(String.valueOf(orderId));
+            orders1.setOrderTime(LocalDateTime.now());
+            orders1.setCheckoutTime(LocalDateTime.now());
+            orders1.setStatus(2);
+
+            //添加订单信息
+            super.save(orders1);
+        }
+
+        //添加订单菜品信息表查询条件
+        LambdaQueryWrapper<OrderDetail> queryWrapper = new LambdaQueryWrapper<>();
+        queryWrapper.eq(orders.getId() != null,OrderDetail::getOrderId,orders.getId());
+
+        //查询订单菜品信息表
+        List<OrderDetail> orderDetails = orderDetailService.list(queryWrapper);
+
+        if (orderDetails != null){
+            List<OrderDetail> orderDetails1 = orderDetails.stream().map((item) -> {
+                //ID设置为空
+                item.setId(null);
+                //修改订单号
+                item.setOrderId(orderId);
+                return item;
+            }).collect(Collectors.toList());
+
+            //添加订单菜品关联信息
+            orderDetailService.saveBatch(orderDetails1);
+        }
     }
 }

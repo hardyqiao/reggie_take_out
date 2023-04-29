@@ -36,7 +36,6 @@ spring:
         show: true  #开启SQL显示，默认false
   main:
     allow-bean-definition-overriding: true
-    lazy-initialization: false
   redis:
     host: 192.168.176.100
     port: 6379

@@ -11,4 +11,6 @@ public interface OrderService extends IService<Orders> {
 
     //用户下单
     public void submit(Orders orders);
+    //复制订单信息并重新下单
+    public void copyOrdersSubmit(Orders orders);
 }

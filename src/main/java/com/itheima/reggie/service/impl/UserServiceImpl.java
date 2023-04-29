@@ -12,4 +12,18 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements UserService {
+
+    /**
+     * 根据用户ID查询用户信息
+     * @param id
+     * @return
+     */
+    @Override
+    public User getById(Long id) {
+
+        //根据id查询用户信息
+        User user = super.getById(id);
+
+        return user;
+    }
 }

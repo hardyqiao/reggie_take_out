@@ -8,4 +8,6 @@ import com.itheima.reggie.entity.User;
  * @create 2023-04-03 22:31
  */
 public interface UserService extends IService<User> {
+    //根据用户ID查询用户信息
+    public User getById(Long id);
 }
